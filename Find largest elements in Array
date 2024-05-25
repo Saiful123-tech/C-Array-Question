@@ -1,0 +1,14 @@
+Find Largest element in an array
+TC O(n)
+
+ public int largest(List<int> arr, int n)
+        {
+            int largestElement = 0;
+             foreach(var item in arr){
+                 if(item>largestElement){
+                     largestElement = item;
+                 }
+             }
+             return largestElement;
+        }
+
