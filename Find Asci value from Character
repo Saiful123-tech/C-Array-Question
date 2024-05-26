@@ -1,0 +1,3 @@
+ char c = Convert.ToChar(Console.ReadLine());
+            int asciValue = (int)c;
+            Console.WriteLine(asciValue);
