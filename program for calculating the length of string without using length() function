@@ -1,0 +1,9 @@
+
+            var st = Console.ReadLine();
+            int size = 0;
+            foreach(var item in st)
+            {
+                size++;
+            }
+            
+            Console.WriteLine(size);
