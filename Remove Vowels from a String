@@ -1,0 +1,22 @@
+ public static void Main(string[] args)
+        {
+
+            var st = Console.ReadLine();
+            int i = 0;
+            while(i<st.Length)
+            {
+                var s = st[i];
+             
+                if (s.ToString().ToLower() ==  "a" || s.ToString().ToLower() == "e" ||
+                    s.ToString().ToLower() == "i" || s.ToString().ToLower() == "o"
+                    || s.ToString().ToLower() ==  "u")
+                {
+                    st = st.Remove(i, 1);
+                    continue;
+                }
+                i++;
+
+            }
+            Console.WriteLine(st);
+        }
+    }
