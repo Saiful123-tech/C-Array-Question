@@ -1,0 +1,23 @@
+public class Solution {
+    public int VowelStrings(string[] words, int left, int right) {
+        int count = 0;
+          for(int i=left;i<=right;i++){
+           string s = words[i];
+  if(s.Length == 1){
+    if(s[0] == 'a' || s[0] == 'e' || s[0] == 'i' || s[0] == 'o' || s[0] =='u'){
+             count++;
+           }
+  }
+           else if(s.Length>1){
+            int size = s.Length -1;
+            if((s[0] == 'a' || s[0] == 'e' || s[0] == 'i' ||
+            s[0] == 'o' || s[0] == 'u')  && (s[size] == 'a'
+            || s[size] == 'e' || s[size] == 'i' || s[size] == 'o'
+           || s[size] == 'u')){
+            count++;
+           }
+           }
+          }
+          return count;
+    }
+}
