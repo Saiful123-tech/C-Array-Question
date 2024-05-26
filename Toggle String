@@ -1,0 +1,27 @@
+Output:
+Enter the String: PREPinsta
+Toggled string: prepINSTA
+
+public static void Main(string[] args)
+        {
+
+            var st = Console.ReadLine();
+            var arr = st.ToCharArray();
+            for(int i = 0; i < arr.Length; i++)
+            {
+                var asciValue = (int)arr[i];
+                if (arr[i] >= 'A' && arr[i] <= 'Z')
+                {
+                    asciValue = asciValue + 32;
+                    arr[i] = Convert.ToChar(asciValue);
+                }
+                else if (arr[i] >= 'a' && arr[i] <= 'z')
+                {
+                    asciValue = asciValue - 32;
+                    arr[i] = Convert.ToChar(asciValue);
+                }
+            }
+
+            Console.WriteLine(String.Join("", arr));
+
+        }
