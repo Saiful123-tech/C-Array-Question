@@ -1,0 +1,17 @@
+ public string removeSpecialCharacter(string s) {
+        // code here
+        int i =0;
+     while(i<s.Length){
+           int asci = (int)s[i];
+           if((asci >=65 && asci <= 92) ||
+           (asci >= 97 && asci <=122)){
+               i++;
+             continue;
+           }
+           s = s.Remove(i,1);
+        }
+        if(s.Length == 0){
+            return "-1";
+        }
+        return s;
+    }
