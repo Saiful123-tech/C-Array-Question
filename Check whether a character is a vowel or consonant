@@ -1,0 +1,10 @@
+var ch = Convert.ToString(Console.ReadLine());
+            ch = ch.ToLower();
+            if(ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u")
+            {
+                Console.WriteLine("Chanrater is alphabetic");
+            }
+            else
+            {
+                Console.WriteLine("Character is not Alphabetic");
+            }
