@@ -1,0 +1,65 @@
+//{ Driver Code Starts
+//Initial Template for C#
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DriverCode
+{
+
+    class GFG
+    {
+        static void Main(string[] args)
+        {
+            int testcases;// Taking testcase as input
+            testcases = Convert.ToInt32(Console.ReadLine());
+            while (testcases-- > 0)// Looping through all testcases
+            {
+                int N = Convert.ToInt32(Console.ReadLine());
+                int[] arr = new int[N];
+
+                string elements = Console.ReadLine().Trim();
+                elements = elements + " " + "0";
+                int[] arr1 = Array.ConvertAll(elements.Split(), int.Parse);
+
+                for (int i = 0; i < N; i++)
+                {
+                    arr[i] = arr1[i];
+                }
+                Solution obj = new Solution();
+                obj.bubbleSort(arr, N);
+                foreach (int i in arr)
+                {
+                    Console.Write(i + " ");
+                }
+                Console.Write("\n");
+            }
+        }
+    }
+}
+// } Driver Code Ends
+
+
+//User function Template for C#
+
+class Solution
+{
+    //Complete this function
+    //Function to sort the array using bubble sort algorithm.
+    public void bubbleSort(int[] arr, int n)
+    {
+        //Your code here
+        for(int i=0;i<n-1;i++){
+           for(int j=0;j<(n-i)-1;j++){
+               if(arr[j]>arr[j+1]){
+                   int temp = arr[j];
+                   arr[j] = arr[j+1];
+                   arr[j+1] = temp;
+               }
+           }
+        }
+    }
+}
